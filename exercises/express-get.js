@@ -18,7 +18,7 @@ Question 1
 Send a response containing a string of `hello world`
 */
 function helloWorld(req, res) {
-	// answer here
+	res.send('hello world')
 }
 router.get('/', helloWorld)
 
@@ -28,7 +28,8 @@ Question 2
 Using the request param of `:name`, send a response containing `hello :name` making sure to replace the `:name` with the request param. 
 */
 function sendBackParams(req, res) {
-	// answer here
+	const name = req.params.name
+	res.send(`hello ${name}`)
 }
 router.get('/:name', sendBackParams)
 
@@ -38,7 +39,9 @@ Question 3
 Using the request param of `:num`, mulitply that number by 2 then send a response of the product.
 */
 function mulitplyByTwo(req, res) {
-	// answer here
+	const num = parseInt(req.params.num)
+	const product = num * 2
+	res.send(`${product}`)
 }
 router.get('/cal/:num', mulitplyByTwo)
 
