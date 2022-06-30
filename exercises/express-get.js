@@ -19,6 +19,7 @@ Send a response containing a string of `hello world`
 */
 function helloWorld(req, res) {
 	// answer here
+	res.send(`hello world`)
 }
 router.get('/', helloWorld)
 
@@ -29,6 +30,7 @@ Using the request param of `:name`, send a response containing `hello :name` mak
 */
 function sendBackParams(req, res) {
 	// answer here
+	res.send(`hello ${req.params.name}`)
 }
 router.get('/:name', sendBackParams)
 
@@ -39,6 +41,9 @@ Using the request param of `:num`, mulitply that number by 2 then send a respons
 */
 function mulitplyByTwo(req, res) {
 	// answer here
+	const num = parseInt(req.params.num)
+	const sum = num * 2
+	res.send(`${sum}`)
 }
 router.get('/cal/:num', mulitplyByTwo)
 
