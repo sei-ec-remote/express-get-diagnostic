@@ -41,7 +41,7 @@ Using the request param of `:num`, mulitply that number by 2 then send a respons
 */
 function mulitplyByTwo(req, res) {
 	// answer here
-	res.send((req.params.num)*2)
+	res.send(`${(req.params.num)*2}`)
 }
 router.get('/cal/:num', mulitplyByTwo)
 
