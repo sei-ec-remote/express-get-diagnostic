@@ -19,6 +19,7 @@ Send a response containing a string of `hello world`
 */
 function helloWorld(req, res) {
 	// answer here
+	res.send('hello world')
 }
 router.get('/', helloWorld)
 
@@ -29,6 +30,8 @@ Using the request param of `:name`, send a response containing `hello :name` mak
 */
 function sendBackParams(req, res) {
 	// answer here
+	console.log(req.sendBackParams)
+	res.send(`hello ${req.params.name}`)
 }
 router.get('/:name', sendBackParams)
 
