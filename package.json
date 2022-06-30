@@ -1,14 +1,14 @@
 {
-  "name": "diagnostic-template",
+  "name": "diagnostic",
   "version": "1.0.0",
-  "description": "",
+  "description": "You have 30 minutes",
   "main": "index.js",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/.bin/jest --coverage",
     "start": "node <name_of_mainjs_file>"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mahider Mengiste",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.3.6",
@@ -21,5 +21,13 @@
   "devDependencies": {
     "jest": "^28.1.1",
     "supertest": "^6.2.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmengi18/express-get-diagnostic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mmengi18/express-get-diagnostic/issues"
+  },
+  "homepage": "https://github.com/mmengi18/express-get-diagnostic#readme"
 }
